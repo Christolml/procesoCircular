@@ -15,23 +15,29 @@ namespace procesosCircular
         static Random aleatorio = new Random();
         int probabilidad, tiempo;
 
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnProcesoCircular_Click(object sender, EventArgs e)
         {
 
             Ciclo miCiclo = new Ciclo();
-            Ciclo mover = new Ciclo();
+            
 
             string mostrar = "", mostrar2 = "";
             int contadorAgregados = 0, contadorAtendidos = 1, contadorCiclosVacios = 0;
             int sumaCiclosAgregados = 0;
             int sumaCiclosAtendidos = 0;
 
-            for (int i = 1; i <= 200; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 probabilidad = aleatorio.Next(1, 5);
                 tiempo = aleatorio.Next(1, 5);        //debe ser 15
@@ -58,22 +64,10 @@ namespace procesosCircular
                     mostrar += "Proceso: " + contadorAtendidos + " ciclo # " + Convert.ToString(miCiclo.verActual().Tiempo) + "\r\n";
                     sumaCiclosAtendidos++;
 
+                    miCiclo.verActual().Tiempo--;
 
-                    miCiclo.siguiente(miCiclo.verActual()).Tiempo--;
-                    
-                    if (miCiclo.verActual().Siguiente != null)
+                    if(miCiclo.verActual().Tiempo == 0)
                     {
-                        miCiclo.moverActual()
-                    }
-                        miCiclo.verActual().Siguiente.Tiempo--;
-                    else
-                        miCiclo.verActual().Tiempo--;
-
-
-
-                    if (miCiclo.verActual().Tiempo == 0)
-                    {
-
                         miCiclo.sacarPrimero();
                         contadorAtendidos++;
                     }

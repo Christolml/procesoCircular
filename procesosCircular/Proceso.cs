@@ -9,7 +9,7 @@ namespace procesosCircular
     class Proceso
     {
         public Proceso Siguiente { get; set; }
-        public Proceso Anterior { get; set; }
+        //public Proceso Anterior { get; set; }
 
 
         public int Tiempo { get; set; }

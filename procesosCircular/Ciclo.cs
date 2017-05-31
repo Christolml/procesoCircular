@@ -42,37 +42,34 @@ namespace procesosCircular
 
         public void sacarPrimero()
         {
-            Primero = Primero.Siguiente;
-            Ultimo.Siguiente = Primero;
+            if(Primero == Ultimo)
+            {
+                Primero = null;
+                Ultimo = null;
+            }
+            else
+            {
+                Primero = Primero.Siguiente;
+                Ultimo.Siguiente = Primero;
+            }
+
 
         }
 
-        Proceso Actual = null;
+
         public Proceso verActual()
         {
+            if (Primero != null)
+            {
+                Ultimo = Ultimo.Siguiente;
+                Primero = Primero.Siguiente;
+            }
+            else
+                return Primero;
 
-            Primero.Siguiente = Actual;
 
-            Primero = Primero.Siguiente;
             return Primero;
         }
-
-        public Proceso siguiente(Proceso entra)
-        {
-            Proceso sale = entra.Siguiente;
-
-            return sale;
-        }
-
-        public Proceso moverActual()
-        {
-            Proceso Actual = Primero;
-
-            Actual = Actual.Siguiente;
-
-            return Actual;
-        }
-
 
 
     }

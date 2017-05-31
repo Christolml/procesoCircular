@@ -1,1 +1,10 @@
 C:\Users\20124360\Desktop\procesoCircular\procesosCircular\procesosCircular\bin\Debug\procesosCircular.exe.config
+C:\Users\chris\Desktop\4 semestre\Estructura de datos\2da parcial\procesoCircular\procesosCircular\procesosCircular\bin\Debug\procesosCircular.exe.config
+C:\Users\chris\Desktop\4 semestre\Estructura de datos\2da parcial\procesoCircular\procesosCircular\procesosCircular\bin\Debug\procesosCircular.exe
+C:\Users\chris\Desktop\4 semestre\Estructura de datos\2da parcial\procesoCircular\procesosCircular\procesosCircular\bin\Debug\procesosCircular.pdb
+C:\Users\chris\Desktop\4 semestre\Estructura de datos\2da parcial\procesoCircular\procesosCircular\procesosCircular\obj\Debug\procesosCircular.csprojResolveAssemblyReference.cache
+C:\Users\chris\Desktop\4 semestre\Estructura de datos\2da parcial\procesoCircular\procesosCircular\procesosCircular\obj\Debug\procesosCircular.Form1.resources
+C:\Users\chris\Desktop\4 semestre\Estructura de datos\2da parcial\procesoCircular\procesosCircular\procesosCircular\obj\Debug\procesosCircular.Properties.Resources.resources
+C:\Users\chris\Desktop\4 semestre\Estructura de datos\2da parcial\procesoCircular\procesosCircular\procesosCircular\obj\Debug\procesosCircular.csproj.GenerateResource.Cache
+C:\Users\chris\Desktop\4 semestre\Estructura de datos\2da parcial\procesoCircular\procesosCircular\procesosCircular\obj\Debug\procesosCircular.exe
+C:\Users\chris\Desktop\4 semestre\Estructura de datos\2da parcial\procesoCircular\procesosCircular\procesosCircular\obj\Debug\procesosCircular.pdb
