@@ -36,22 +36,57 @@ namespace procesosCircular
                     //contador++;
             }
 
-
         }
 
-
-        public void sacarPrimero()
+        public void ponerVacio()
         {
-            if(Primero == Ultimo)
+            Primero = null;
+            Ultimo = null;
+        }
+
+        public void sacarPrimero(Proceso sacado)
+        {
+            Proceso Actual = Primero;
+            Proceso Anterior = null;
+            bool encontrado = false;            //sirve para indicarme cuando el codigo coincida con el que busco
+
+            do
             {
-                Primero = null;
-                Ultimo = null;
+                if (Actual == sacado)
+                {
+                    if (Actual == Primero)
+                    {
+                        Primero = Primero.Siguiente;
+                        Ultimo.Siguiente = Primero;
+                    }
+                    else if (Actual == Ultimo)
+                    {
+                        Anterior.Siguiente = Primero;
+                        Ultimo = Anterior;
+                    }
+                    else
+                    {
+                        Anterior.Siguiente = Actual.Siguiente;
+                    }
+                    encontrado = true;
+                }
+                Anterior = Actual;
+                Actual = Actual.Siguiente;
             }
-            else
-            {
-                Primero = Primero.Siguiente;
-                Ultimo.Siguiente = Primero;
-            }
+            while (Actual != Primero && encontrado != true);
+
+
+
+            //if (Primero == Ultimo)
+            //{
+            //    Primero = null;
+            //    Ultimo = null;
+            //}
+            //else
+            //{
+            //    Primero = Primero.Siguiente;
+            //    Ultimo.Siguiente = Primero;
+            //}
 
 
         }
@@ -59,15 +94,6 @@ namespace procesosCircular
 
         public Proceso verActual()
         {
-            if (Primero != null)
-            {
-                Ultimo = Ultimo.Siguiente;
-                Primero = Primero.Siguiente;
-            }
-            else
-                return Primero;
-
-
             return Primero;
         }
 

@@ -13,11 +13,14 @@ namespace procesosCircular
 
 
         public int Tiempo { get; set; }
+        public int Lugar { get; set; }
 
 
-        public Proceso(int tiempo)
+
+        public Proceso(int tiempo, int lugar)
         {
             this.Tiempo = tiempo;
+            this.Lugar = lugar;
         }
     }
 }
